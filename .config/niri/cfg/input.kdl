@@ -4,7 +4,8 @@
 input {
     keyboard {
         xkb {
-            layout "us" // Use the American keyboard layout
+            layout "us"
+            variant "intl" // Use the intl keyboard layout
         }
         numlock // Enable numlock on startup
     }
@@ -14,6 +15,11 @@ input {
         natural-scroll // Enable natural (macOS-style) scrolling
     }
 
+    mouse {
+        accel-profile "flat"
+    }
+
     focus-follows-mouse // Automatically focus windows under the mouse pointer
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
+

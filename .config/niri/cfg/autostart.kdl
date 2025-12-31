@@ -1,5 +1,9 @@
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
-    spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1" "&" // Polkit
+spawn-at-startup "xwayland-satellite" // XWayland support
+spawn-at-startup "swww-daemon" // Wallpaper daemon
+spawn-at-startup "qs" "-c" "noctalia-shell" // Launch Quickshell
+spawn-at-startup "discord" // Launch Discord
+spawn-at-startup "openrgb" // Launch OpenRGB
