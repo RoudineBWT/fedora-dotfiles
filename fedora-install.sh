@@ -9,9 +9,9 @@ for repo in "${repos[@]}"; do
     sudo dnf5 -y copr enable $repo
 done
 
-sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-sudo dnf install terra-release-extra terra-release-mesa terra-release-multimedia
-sudo dnf update
+sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
+sudo dnf install terra-release-extra terra-release-mesa terra-release-multimedia -y
+sudo dnf update -y
 
 niri_packages=(
 "niri"
