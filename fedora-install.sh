@@ -10,7 +10,7 @@ for repo in "${repos[@]}"; do
 done
 
 sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-sudo dnf in terra-release-extra terra-release-mesa terra-release-multimedia
+sudo dnf install terra-release-extra terra-release-mesa terra-release-multimedia
 sudo dnf update
 
 niri_packages=(
