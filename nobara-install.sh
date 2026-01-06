@@ -2,6 +2,7 @@
 set -e  # Stop on error
 repos=(
     solopasha/hyprland
+    yalter/niri
     errornointernet/quickshell
     zhangyi6324/noctalia-shell
 )
@@ -9,10 +10,6 @@ repos=(
 for repo in "${repos[@]}"; do
     sudo dnf5 -y copr enable $repo
 done
-
-sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release -y
-sudo dnf install terra-release-extra terra-release-mesa terra-release-multimedia -y
-sudo dnf update -y
 
 niri_packages=(
 "niri"
@@ -35,7 +32,6 @@ niri_packages=(
 "kf5-kirigami2"
 "kf6-kirigami"
 "qt6-qtdeclarative"
-"noctalia-shell"
 )
 
 programming_packages=(

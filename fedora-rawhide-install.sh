@@ -3,7 +3,6 @@ set -e  # Stop on error
 repos=(
     solopasha/hyprland
     errornointernet/quickshell
-    zhangyi6324/noctalia-shell
 )
 
 for repo in "${repos[@]}"; do
@@ -35,7 +34,6 @@ niri_packages=(
 "kf5-kirigami2"
 "kf6-kirigami"
 "qt6-qtdeclarative"
-"noctalia-shell"
 )
 
 programming_packages=(
@@ -52,4 +50,5 @@ packages=(
 # install rpms
 sudo dnf install -y ${packages[@]}
 
-noctalia-shell
+# install noctalia-shell (I will try to find how to make a copr for this)
+mkdir -p ~/.config/quickshell/noctalia-shell && curl -sL https://github.com/noctalia-dev/noctalia-shell/releases/latest/download/noctalia-latest.tar.gz | tar -xz --strip-components=1 -C ~/.config/quickshell/noctalia-shell
