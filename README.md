@@ -3,11 +3,22 @@ In this dotfiles you will find my niri configuration, noctalia-shell,  fastfetch
 
 What i did to setup fedora rawhide + nix :
 
-firstly I enabled terra repo and installed niri
+firstly I enabled terra repo and installed niri :
 ```
 git clone https://github.com/RoudineBWT/fedora-dotfiles.git
 cd fedora-dotfiles
+```
+# Rawhide 
+```
+sudo bash fedora-rawhide-install.sh
+```
+# Stable release
+```
 sudo bash fedora-install.sh
+```
+# Nobara
+```
+sudo bash nobara-install.sh
 ```
 secondly I installed nix and home manager via this *nix-installer.sh*
 ```
